@@ -1,0 +1,45 @@
+/* ============================================================
+   📘 Exercício de SQL – Criação de Tabelas
+   Autor: Eduardo Sena Porto
+   Descrição: Criação de 3 tabelas simples no banco EXERCICIOS
+   ============================================================ */
+
+-- Garantir que o Banco de Dados "EXERCICIOS" está selecionado
+USE EXERCICIOS;
+
+---------------------------------------------------------------
+-- 🧑‍💻 Tabela de Clientes
+---------------------------------------------------------------
+CREATE TABLE DCLIENTE (
+    ID_CLIENTE INT,
+    NOME_CLIENTE VARCHAR(100),
+    DATA_DE_NASCIMENTO DATETIME
+);
+
+---------------------------------------------------------------
+-- 👔 Tabela de Gerentes
+---------------------------------------------------------------
+CREATE TABLE DGERENTE (
+    ID_GERENTE INT,
+    NOME_GERENTE VARCHAR(100),
+    DATA_DE_CONTRATACAO DATETIME,
+    SALARIO FLOAT
+);
+
+---------------------------------------------------------------
+-- 📑 Tabela de Contratos
+---------------------------------------------------------------
+CREATE TABLE FCONTRATOS (
+    ID_CONTRATO INT,
+    DATA_DE_ASSINATURA DATETIME,
+    ID_CLIENTE INT,
+    ID_GERENTE INT,
+    VALOR_CONTRATO FLOAT
+);
+
+---------------------------------------------------------------
+-- 🔎 Consultas para visualizar as tabelas criadas
+---------------------------------------------------------------
+SELECT * FROM DCLIENTE;
+SELECT * FROM DGERENTE;
+SELECT * FROM FCONTRATOS;
